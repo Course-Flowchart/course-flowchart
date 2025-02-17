@@ -1,4 +1,7 @@
 import "./globals.css";
+import "@radix-ui/themes/styles.css";
+
+import { Theme } from "@radix-ui/themes";
 
 import type { Metadata } from "next";
 
@@ -48,7 +51,9 @@ export default function RootLayout({
       <body className="">
         {/* HEADER */}
         <main className="">
-          {children}
+          <Theme>
+            {children}
+          </Theme>
         </main>
         {/* FOOTER */}
       </body>
